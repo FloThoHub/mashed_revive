@@ -96,21 +96,21 @@ namespace UnityEngine.Networking
             {
                 if (noConnection)
                 {
-                    //if (UnityEngine.Application.platform != RuntimePlatform.WebGLPlayer)
-                    //{
-                    //    if (GUI.Button(new Rect(xpos, ypos, 200, 20), "LAN Host(H)"))
-                    //    {
-                    //        manager.StartHost();
-                    //    }
-                    //    ypos += spacing;
-                    //}
+                    if (UnityEngine.Application.platform != RuntimePlatform.WebGLPlayer)
+                    {
+                        if (GUI.Button(new Rect(xpos, ypos, 200, 20), "LAN Host(H)"))
+                        {
+                            manager.StartHost();
+                        }
+                        ypos += spacing;
+                    }
 
-                    //if (GUI.Button(new Rect(xpos, ypos, 105, 20), "LAN Client(C)"))
-                    //{
-                    //    manager.StartClient();
-                    //}
+                    if (GUI.Button(new Rect(xpos, ypos, 105, 20), "LAN Client(C)"))
+                    {
+                        manager.StartClient();
+                    }
 
-                    //manager.networkAddress = GUI.TextField(new Rect(xpos + 100, ypos, 95, 20), manager.networkAddress);
+                    manager.networkAddress = GUI.TextField(new Rect(xpos + 100, ypos, 95, 20), manager.networkAddress);
                     ypos += spacing;
 
                     if (UnityEngine.Application.platform == RuntimePlatform.WebGLPlayer)
@@ -121,11 +121,11 @@ namespace UnityEngine.Networking
                     }
                     else
                     {
-                        //if (GUI.Button(new Rect(xpos, ypos, 200, 20), "LAN Server Only(S)"))
-                        //{
-                        //    manager.StartServer();
-                        //}
-                        //ypos += spacing;
+                        if (GUI.Button(new Rect(xpos, ypos, 200, 20), "LAN Server Only(S)"))
+                        {
+                            manager.StartServer();
+                        }
+                        ypos += spacing;
                     }
                 }
                 else
@@ -194,7 +194,7 @@ namespace UnityEngine.Networking
 
                 if (manager.matchMaker == null)
                 {
-                    if (GUI.Button(new Rect(xpos, ypos, 200, 20), "Matchmaking"))
+                    if (GUI.Button(new Rect(xpos, ypos, 200, 20), "Enable Match Maker (M)"))
                     {
                         manager.StartMatchMaker();
                     }

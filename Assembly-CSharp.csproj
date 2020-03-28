@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CameraPositionUpdate.cs" />
     <Compile Include="Assets\Scripts\MoveWithKeys.cs" />
     <Compile Include="Assets\Scripts\NetworkControls.cs" />
+    <Compile Include="Assets\Scripts\NetworkManagerHUD_Mashed.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />

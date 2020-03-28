@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 using UnityEngine;
 
 [System.Obsolete]
-public class CameraPositionUpdate : NetworkBehaviour
+public class CameraPositionUpdate : MonoBehaviour
 {
     public Transform player;
     Vector3 offset;
@@ -17,11 +17,11 @@ public class CameraPositionUpdate : NetworkBehaviour
 
     public void Update()
     {
-        if (!isLocalPlayer)
-        {
-            // exit from update if this is not the local player
-            return;
-        }
+        //if (!isLocalPlayer)
+        //{
+        //    // exit from update if this is not the local player
+        //    return;
+        //}
 
         offset = transform.position - player.position;
         transform.position = player.position + offset;
